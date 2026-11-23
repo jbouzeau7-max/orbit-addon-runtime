@@ -1,0 +1,36 @@
+{
+  "name": "orbit-addon-runtime",
+  "version": "0.1.0",
+  "description": "A small, permission-aware add-on runtime for applications you control.",
+  "type": "module",
+  "types": "./src/index.d.ts",
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./manifest": {
+      "types": "./src/index.d.ts",
+      "import": "./src/manifest.js"
+    }
+  },
+  "bin": {
+    "orbit-addon": "./bin/orbit.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "demo": "node examples/host-demo.mjs",
+    "validate:example": "node bin/orbit.js validate examples/addons/hello/addon.json"
+  },
+  "license": "Apache-2.0",
+  "keywords": ["addons", "plugin-runtime", "permissions", "runtime", "javascript"]
+}

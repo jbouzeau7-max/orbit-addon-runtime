@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "hello-notifier",
+  "name": "Hello Notifier",
+  "version": "1.0.0",
+  "description": "Affiche une notification locale à chaque message envoyé.",
+  "kind": "plugin",
+  "capabilities": ["events", "notifications"]
+}
